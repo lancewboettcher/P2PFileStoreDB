@@ -58,8 +58,9 @@ module.exports.removeFile = function(filename, host) {
 				for (var j = 0; j < files[i].hosts.length; j++) {
 
 					//Remove that host from host list
-
-					if (files[i].hosts[j] == host) {
+				//	console.log("A host: " + files[i].hosts[j]);
+				//	console.log("B host: " + host);
+					if (files[i].hosts[j].includes(host)) {
 						files[i].hosts.splice(j, 1);
 					}
 				}
